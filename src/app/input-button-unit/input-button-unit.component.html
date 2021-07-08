@@ -5,5 +5,5 @@
 </p>
 
 
-<input [value]="title">
-<button>Save</button>
+<input #inputElementRef [value]="title" (keyup.enter)="changeTitle(inputElementRef.value)">
+<button (click)="changeTitle(inputElementRef.value)">Save</button>
